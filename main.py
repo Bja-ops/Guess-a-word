@@ -16,6 +16,12 @@ vegetables = ["brokuł", "seler", "marchew",
               "pasternak", "ziemniak", "pomidor",
               "rzodkiewka", "kapusta", "sałata",
               "cebula", "batat", "papryka"]
+
+
+animals = ["pies", "kot", "krowa",
+           "królik", "zając", "byk",
+           "kura", "koza", "sarna",
+           "jeleń", "łoś", "wróbel"]
 target_name = random.choice(names)
 
 category = input("Podaj kategorię (imie, owoce, warzywa, zwierzęta): ")
@@ -48,3 +54,13 @@ elif category == "warzywa":
             break
         else:
             print("Nie zgadłeś, spóbuj ponownie")
+elif category == "zwierzeta":
+    target_animal = random.choice(animals)
+    print("Zgadnij zwierzę! Podpowiedź, ma ono", len(target_animal), "liter.")
+    while True:
+        guessA = input("Podaj zwierzę: ")
+        if guessA == random.choice(animals):
+            print("Zgadłeś! ")
+            break
+        else:
+            print("Nie zgadłeś, spróbuj ponownie")
